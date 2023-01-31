@@ -11,12 +11,12 @@ The principal components are computed by eigen decomposition of the data covaria
 ```
 Accuracy and Confusion Matrices. Principal Components: 9
 ``` 
-![png](eigenfaces_files/eigenfaces_7_1.png)
+![eigenfaces_7_1](https://user-images.githubusercontent.com/73662635/215824803-1c8ddd21-72d8-4ac9-a948-33abac54b6fd.png)
 
 ```    
 Accuracy and Confusion Matrices. Principal Components:  30
 ``` 
-![png](eigenfaces_files/eigenfaces_7_3.png)
+![eigenfaces_7_3](https://user-images.githubusercontent.com/73662635/215824864-9497ed2b-890b-4ef9-8894-8c1dbde33560.png)
     
 An increase of the eigenspace to 30 principal components had a significant improvement on the accuracy. It made the method able to generalise better by scoring close to 100% on the first test sets. This was expected since the first principal component has the largest variance and each of the subsequent ones has the largest remaining, with the restriction that they're orthogonal to each other. This means that by adding components we can extract more features from the data.
 
@@ -24,7 +24,7 @@ An increase of the eigenspace to 30 principal components had a significant impro
 
 Sirovich and Kirby showed that principal component analysis could be used on a collection of face images to form a set of basis features. These basis images, known as eigenfaces, could be linearly combined to reconstruct images in the original training set. Reconstruction of images from the test set can be seen below.
     
-![png](eigenfaces_files/eigenfaces_13_0.png)
+![eigenfaces_13_0](https://user-images.githubusercontent.com/73662635/215825003-263e7a49-a5b8-48bc-b5fa-f55d28de0a3e.png)
     
 The reconstructions with 30 principal components might look slightly worse, but this is due to the fact that there is an increase in the features, thus they carry more information and appear more sharp. Still the reconstruction of most of them was pretty close in the photos with better lighting conditions.
 
@@ -35,12 +35,13 @@ After performing singular value decomposition a comparison was also made to the 
 ```
 Eigen Vectors
 ``` 
-![png](eigenfaces_files/eigenfaces_17_1.png)
+![eigenfaces_17_1](https://user-images.githubusercontent.com/73662635/215825101-791f2039-62f5-420c-a48e-e06d6de17252.png)
     
 ``` 
 Singular Vectors
 ``` 
-![png](eigenfaces_files/eigenfaces_17_3.png)
+
+![eigenfaces_17_3](https://user-images.githubusercontent.com/73662635/215825214-a259a0e3-5668-46cf-a950-46458cad697a.png)
 
 The SVD is applied to the matrix of the first dataset, while PCA on the covariance matrix. The small differences in them are because for the PCA method the initial images were normalised. This makes the eigen vectors lack that extra bit of information that is still present in the singular vectors.
 
